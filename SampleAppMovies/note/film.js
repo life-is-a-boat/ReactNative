@@ -65,6 +65,8 @@ export default class SampleAppMovies extends Component {
         );
     }
     renderMovie({item}) {
+        // { item }是一种“解构”写法，请阅读ES2015语法的相关文档
+    // item也是FlatList中固定的参数名，请阅读FlatList的相关文档
         return (
             <View style={styles.container}>
                 <Image source={{uri: item.posters.thumbnail}}
