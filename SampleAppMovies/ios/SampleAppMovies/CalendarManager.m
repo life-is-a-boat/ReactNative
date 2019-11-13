@@ -26,4 +26,9 @@ RCT_EXPORT_METHOD(addEvent:(NSString *)name location:(NSString *)location date:(
   NSDate *date = [RCTConvert NSData:secondsSinceUnixEpoch];
 }
 
+RCT_EXPORT_METHOD(addEvent:(NSString *)name details:(NSDictionary *)details) {
+  NSString *location = [RCTConvert NSString:details[@"location"]];
+  NSDate *time = [RCTConvert NSDate:details[@"time"]];
+}
+
 @end
