@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { View,StyleSheet } from 'react-native';
 /*
 一般来说，使用flexDirection、alignItems和 justifyContent三个样式属性就已经能满足大多数布局需求。
 flexDirection:column,row 默认是column
@@ -21,11 +21,16 @@ export default class FlexDirectionBasics extends Component {
     render() {
         return (
 
-            // <View style={{flex: 1, flexDirection: 'row'}}>
-                // <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}}/>
-                // <View style={{width: 50, height: 50, backgroundColor: 'skyblue'}}/>
-                // <View style={{width: 50, height: 50, backgroundColor: 'steelblue'}}/>
-            // </View>
+            <View style={{
+                flex: 1, 
+                flexDirection: 'row',
+                justifyContent:'center',
+                alignItems:'center'
+            }}>
+                <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}}/>
+                <View style={{width: 50, height: 50, backgroundColor: 'skyblue'}}/>
+                <View style={{width: 50, height: 50, backgroundColor: 'steelblue'}}/>
+            </View>
 
 
             // <View style={{
@@ -33,20 +38,29 @@ export default class FlexDirectionBasics extends Component {
             //     flexDirection: 'column',
             //     justifyContent: 'space-between',
             // }}>
-                // <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}}/>
-                // <View style={{width: 50, height: 50, backgroundColor: 'skyblue'}}/>
-                // <View style={{width: 50, height: 50, backgroundColor: 'steelblue'}}/>
+            //     <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}}/>
+            //     <View style={{width: 50, height: 50, backgroundColor: 'skyblue'}}/>
+            //     <View style={{width: 50, height: 50, backgroundColor: 'steelblue'}}/>
             // </View>
 
-            <View style={{
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'stretch'
-            }}>
-                    <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}}/>
-                    <View style={{ height: 50, backgroundColor: 'skyblue'}}/>
-                    <View style={{ height: 150, backgroundColor: 'steelblue'}}/>
-            </View>
+        //     <View style={{
+        //         flexDirection: 'column',
+        //         justifyContent: 'center',
+        //         alignItems: 'stretch'
+        //     }}>
+        //             <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}}/>
+        //             <View style={{ height: 50, backgroundColor: 'skyblue'}}/>
+        //             <View style={{ height: 150, backgroundColor: 'steelblue'}}/>
+        //     </View>
         );
     }
 }
+
+const styles=StyleSheet.create({
+    container: {
+        flex: 1, 
+        flexDirection: 'row',
+        justifyContent:'center',
+        alignItems:'center'
+    }
+});
